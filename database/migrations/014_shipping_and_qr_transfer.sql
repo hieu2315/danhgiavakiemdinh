@@ -1,0 +1,3 @@
+ALTER TABLE products ADD COLUMN weight_grams INTEGER NOT NULL DEFAULT 1000 CHECK(weight_grams BETWEEN 1 AND 1000000);
+ALTER TABLE orders ADD COLUMN shipping_fee INTEGER NOT NULL DEFAULT 0 CHECK(shipping_fee>=0);
+ALTER TABLE orders ADD COLUMN total_weight_grams INTEGER NOT NULL DEFAULT 0 CHECK(total_weight_grams>=0);

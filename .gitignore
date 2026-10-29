@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+reloop.sqlite3
+reloop-demo.sqlite3
+*.sqlite3-journal
+tests/tmp*/
+.env
+
+frontend/assets/uploads/
+
+backups/
+storage/uploads/

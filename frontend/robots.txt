@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /cart
+# robots.txt is crawl guidance, not access control. Private endpoints remain protected by the backend.
