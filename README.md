@@ -9,7 +9,7 @@ py -m pip install -r requirements.txt
 .\scripts\start-demo.ps1
 ```
 
-Mở `http://127.0.0.1:8000`. Script demo dùng database `reloop.sqlite3` đi kèm gói, giữ các tài khoản cũ và thêm dữ liệu mẫu an toàn theo cơ chế idempotent. Tài khoản quản trị local:
+Mở `http://127.0.0.1:8000`. Script demo tạo hoặc cập nhật database local `reloop.sqlite3` trong thư mục dự án, rồi thêm dữ liệu mẫu an toàn theo cơ chế idempotent. Tài khoản quản trị local:
 
 - Email: `admin@reloop.local`
 - Mật khẩu: `ReLoopAdmin-Local-2026!`

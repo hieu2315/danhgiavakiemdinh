@@ -1,7 +1,7 @@
 # Báo cáo kết quả kiểm thử
 
 Ngày rà soát: 29/10/2026  
-Mã nguồn: gói ReLoopMarket-rental-fixed-tested  
+Mã nguồn: ReLoopMarkett.zip (bản rà soát đã bổ sung frontend/recommendations.js)  
 Môi trường: Windows, Python 3.13.16, Node.js 24.22.0; SQLite tạm và HTTP loopback.
 
 ## Kết quả chạy
@@ -24,6 +24,10 @@ Trong lần cập nhật gần nhất, 5 API test được bổ sung cho voucher
 ## Bằng chứng được nhóm cung cấp
 
 Báo cáo giao diện ban đầu ghi nhận 19/19 ca thủ công đạt và kèm một số ảnh minh họa. Lượt rà soát này không chạy lại các ca đó; chúng được xem là kết quả do nhóm ghi nhận, không phải kết quả E2E độc lập đã tái lập.
+
+## Kiểm tra gói bàn giao
+
+ZIP nhận ban đầu thiếu `frontend/recommendations.js`, dù trang sản phẩm và backend tham chiếu tệp này; API-15 nhận HTTP 404. Tệp đã được bổ sung vào bản ZIP rà soát. Sau khi sửa, chạy lại toàn bộ suite đạt 29/29. README cũng được chỉnh để nói rõ script tạo database local khi chạy; ZIP không cần chứa database mẫu.
 
 ## Giới hạn còn lại
 
