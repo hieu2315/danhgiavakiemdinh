@@ -97,25 +97,25 @@ Mở `policies.html` để xem thông tin đơn vị vận hành, liên hệ và
 
 Rà soát văn bản, nguồn chính thức và các việc còn lại ở `docs/LEGAL_REVIEW.md`. Tại ngày 20/10/2026, cần tính đến Luật Thương mại điện tử 122/2025/QH15 và Nghị định 248/2026/NĐ-CP (hiệu lực 01/07/2026), cùng Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 và Nghị định 356/2025/NĐ-CP (hiệu lực 01/01/2026). Đây không phải xác nhận tuân thủ; chưa bật bán thật trước khi xác minh thông tin đơn vị vận hành, nghĩa vụ nền tảng và các chính sách vận hành thực tế.
 
-## SEO và marketing (mục 13)
+## SEO và marketing 
 
 - Trang sản phẩm công khai được server render tại `/p/<slug>` với title/description riêng, canonical tuyệt đối khi `RELOOP_PUBLIC_BASE_URL` được cấu hình HTTPS, breadcrumb và JSON-LD Product/Offer/BreadcrumbList lấy từ dữ liệu sản phẩm đang bán. Rating chỉ có trong JSON-LD khi tồn tại đánh giá đã duyệt.
 - Sitemap XML động chỉ hoạt động sau khi đặt `RELOOP_PUBLIC_BASE_URL` thành origin HTTPS thật. Sitemap chỉ chứa trang công khai và sản phẩm còn bán; `/robots.txt` hướng dẫn bot nhưng không thay thế backend authorization.
 - Nội dung hướng dẫn ở `frontend/guides.html`; kịch bản chiến dịch giả định ở `docs/MARKETING_PLAN.md`. Chưa có analytics hoặc chiến dịch quảng cáo chạy thật.
 
-## Thiết kế cơ sở dữ liệu (mục 14)
+## Thiết kế cơ sở dữ liệu 
 
 Schema SQLite, quan hệ, khóa, index, kiểu tiền, thời gian, transaction, retention và các nhóm dữ liệu đã triển khai được mô tả trong `docs/DATABASE_SCHEMA.md`. Migration 014 lưu khối lượng theo gram và snapshot phí/khối lượng giao hàng trên từng đơn. Tiền dùng số nguyên VND; hệ số tác động là ước lượng phi tiền tệ. Cart hiện là dữ liệu nháp tại trình duyệt, còn checkout xác thực lại bằng backend.
-## Dữ liệu và tài khoản demo (mục 15)
+## Dữ liệu và tài khoản demo 
 
 `scripts/start-demo.ps1` khởi tạo catalog gồm 24 sản phẩm rồi tạo giao dịch demo cục bộ. Tài khoản mẫu chỉ dùng trên máy local:
 
 | Vai trò | Email | Mật khẩu |
 |---|---|---|
-| Khách hàng | `customer@reloop.local` | `CustomerDemo!2026` |
-| Người bán cá nhân C2C | `seller.personal@reloop.local` | `SellerDemo!2026` |
-| Người bán cửa hàng B2C | `seller.business@reloop.local` | `BusinessDemo!2026` |
-| Quản trị viên local | `admin@reloop.local` | `ReLoopAdmin-Local-2026!` |
+| Khách hàng | `phamvanhieu2315@gmail.com` | `hieu23012005` |
+| Người bán cá nhân C2C | `hieuchung@gmail.com` | `hieuchung123456` |
+| Người bán cửa hàng B2C | `hieuchung@gmail.com` | `hieuchung123456` |
+| Quản trị viên local | `admin@example.test` | `AdminPassword-123` |
 
 Không dùng các mật khẩu demo trên deployment công khai. Khi cần tạo admin riêng, thiết lập `RELOOP_ADMIN_EMAIL` và `RELOOP_ADMIN_PASSWORD` trong môi trường backend trước lần khởi chạy đầu tiên. `python scripts/seed_demo.py` chạy lại seed giao dịch demo theo cách idempotent và từ chối khi `RELOOP_ENV=production`.
 
@@ -134,4 +134,3 @@ Không dùng các mật khẩu demo trên deployment công khai. Khi cần tạo
 
 Không thêm Docker Compose vì ứng dụng hiện là Python + SQLite không cần dịch vụ database riêng; `scripts/start-demo.ps1` là cách chạy local trên Windows. README và checklist ghi riêng những phần chưa triển khai hoặc chưa thể xác minh.
 
-- [Tiêu chí chấp nhận cuối cùng](docs/ACCEPTANCE.md) (trạng thái theo bằng chứng; hiện chưa đạt nghiệm thu toàn bộ).
