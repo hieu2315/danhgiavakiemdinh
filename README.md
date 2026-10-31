@@ -11,8 +11,8 @@ py -m pip install -r requirements.txt
 
 Mở `http://127.0.0.1:8000`. Script demo tạo hoặc cập nhật database local `reloop.sqlite3` trong thư mục dự án, rồi thêm dữ liệu mẫu an toàn theo cơ chế idempotent. Tài khoản quản trị local:
 
-- Email: `admin@reloop.local`
-- Mật khẩu: `ReLoopAdmin-Local-2026!`
+- Email: `admin@example.test`
+- Mật khẩu: `AdminPassword-123`
 
 Chỉ dùng tài khoản này trên máy local. Khi triển khai, đặt `RELOOP_ADMIN_EMAIL` và `RELOOP_ADMIN_PASSWORD` trước lần khởi chạy đầu tiên. Người đăng ký công khai luôn nhận vai trò khách hàng.
 
@@ -61,7 +61,7 @@ node --check frontend\app.js
 py -m py_compile server.py backend\app.py tests\test_app.py scripts\db_maintenance.py
 ```
 
-Ngày 29/10/2026, bộ kiểm thử gồm **29 tests passed, 0 failed** (7 helper/unit và 22 API integration). Bộ test dùng SQLite tạm và HTTP loopback; phạm vi gồm helper, catalog, tài khoản/session, phân quyền cơ bản, checkout/idempotency, VNPay fail-closed, gợi ý sản phẩm, một số điều kiện voucher, tồn kho, đặt thuê trùng lịch và chuyển trạng thái đơn. Selenium/Playwright, coverage, CI, VNPay thật và SMTP thật chưa được kiểm tra. Xem [báo cáo kết quả](docs/TEST_REPORT.md) để biết phạm vi và giới hạn.
+Bộ kiểm thử gồm **29 tests passed, 0 failed** (7 helper/unit và 22 API integration). Bộ test dùng SQLite tạm và HTTP loopback; phạm vi gồm helper, catalog, tài khoản/session, phân quyền cơ bản, checkout/idempotency, VNPay fail-closed, gợi ý sản phẩm, một số điều kiện voucher, tồn kho, đặt thuê trùng lịch và chuyển trạng thái đơn. Selenium/Playwright, coverage, CI, VNPay thật và SMTP thật chưa được kiểm tra. Xem [báo cáo kết quả](docs/TEST_REPORT.md) để biết phạm vi và giới hạn.
 
 ## VNPay Sandbox
 
