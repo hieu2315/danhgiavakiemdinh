@@ -33,7 +33,7 @@ Sao chép `.env.example` làm danh sách tham khảo; đặt giá trị bằng m
 
 Giỏ hàng phía trình duyệt được lưu cục bộ; dữ liệu tài khoản, sản phẩm, đơn hàng, điểm, giao dịch và phân quyền nằm ở SQLite/backend.
 
-## Bảo mật (mục 11)
+## Bảo mật 
 
 - Mật khẩu dùng bcrypt cost 12; hash PBKDF2 cũ được nâng sau lần đăng nhập thành công. Đổi mật khẩu xác minh mật khẩu hiện tại và thu hồi các phiên khác.
 - Throttle đăng nhập theo IP và tài khoản, thông báo sai chung, cookie HttpOnly/SameSite, kiểm tra Origin/Referer cho thao tác có cookie, security headers.
