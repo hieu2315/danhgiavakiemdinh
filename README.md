@@ -1,3 +1,4 @@
+https://drive.google.com/drive/folders/1A77G7_dD5caNjKGTgAdZaEjRwUCL_rru?usp=sharing
 # ReLoop Market
 
 Website thương mại điện tử tuần hoàn C2C/B2C. Frontend HTML/CSS/JavaScript, backend Python và SQLite, migration SQL có phiên bản. Yêu cầu Python 3.10+.
